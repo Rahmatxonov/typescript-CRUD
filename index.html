@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-green-400 h-[100vh] flex items-center flex-col justify-center"
+  >
+    <form class="todo-form w-[600px] p-10 bg-white rounded-md">
+      <label class="flex flex-col">
+        <span>Enter name...</span>
+        <div class="flex justify-between mb-[50px]">
+          <label>
+            <input
+              required
+              class="todo-input p-2 rounded-md border-[1px] border-black w-full mt-4"
+              type="text"
+            />
+            <input type="file" class="todo-image-input pt-5" accept="image/*" />
+          </label>
+        </div>
+        <button
+          class="bg-green-400 text-white font-semibold p-3 rounded-md hover:bg-green-500 mt-8"
+          type="submit"
+        >
+          Submit
+        </button>
+      </label>
+    </form>
+    <ul class="todo-list p-5 rounded-md bg-white mt-5 w-[600px]"></ul>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="./main.js"></script>
+  </body>
+</html>
